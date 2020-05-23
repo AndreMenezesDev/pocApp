@@ -55,12 +55,24 @@ export class FolderPage implements OnInit {
         let listaProd = [];
         let that=this;
         let produto = [];
+        let campos = [
+          'codigo',
+          'descricao',
+          'qtde',
+          'unidade',
+          'valorUnitario',
+          'valorTotal'
+        ]
         let dados = [];
         let produtos = items.forEach((item)=>{
           if (item.id.includes("Item +")){
             listaProd.push(item);
-            item.childNodes.forEach(campo => {
-              dados.push(campo.textContent);
+            item.childNodes.forEach((campo,index) => {
+              let obj = {};
+              let campoProp = campos[index];
+              obj[campoProp] = campo.textContent;
+              dados.push(obj)
+              //dados.push(campo.textContent);
             });
             produto.push(dados);
             dados = [];
