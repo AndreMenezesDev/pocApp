@@ -1,7 +1,14 @@
 {
   "name": "teste",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "proxies":[
+    {
+      "path":"/",
+      "proxyUrl":"http://sistemas.sefaz.am.gov.br/nfceweb/consultarNFCe.jsp?p=13200500835261000555650550001005601007172695"
+    }
+  ]
 }

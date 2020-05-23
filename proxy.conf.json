@@ -1,0 +1,6 @@
+{
+    "/": {
+   "target": "https://api.codetabs.com",
+   "secure": false
+   }
+}
